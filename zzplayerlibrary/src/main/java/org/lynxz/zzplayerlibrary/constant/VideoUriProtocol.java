@@ -6,5 +6,6 @@ package org.lynxz.zzplayerlibrary.constant;
  */
 public interface VideoUriProtocol {
     String PROTOCOL_HTTP = "http";
+    String PROTOCOL_HTTPS = "https";
     String PROTOCOL_ANDROID_RESOURCE = "android.resource";
 }
