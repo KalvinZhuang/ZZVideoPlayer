@@ -209,7 +209,7 @@ public class VideoPlayer extends RelativeLayout implements View.OnTouchListener 
         @Override
         public void onPlayTurn() {
             //网络不正常时,不允许切换,本地视频则跳过这一步
-            if (VideoUriProtocol.PROTOCOL_HTTP.equalsIgnoreCase(mVideoProtocol)
+            if (mIsOnlineSource
                     && !mNetworkAvailable) {
                 mIPlayerImpl.onNetWorkError();
                 return;
@@ -538,7 +538,7 @@ public class VideoPlayer extends RelativeLayout implements View.OnTouchListener 
         mHostActivity = new WeakReference<Activity>(act);
         mVideoUri = Uri.parse(path);
         mVideoProtocol = mVideoUri.getScheme();
-        if (VideoUriProtocol.PROTOCOL_HTTP.equalsIgnoreCase(mVideoProtocol)) {
+        if (VideoUriProtocol.PROTOCOL_HTTP.equalsIgnoreCase(mVideoProtocol) || VideoUriProtocol.PROTOCOL_HTTPS.equalsIgnoreCase(mVideoProtocol)) {
             mIsOnlineSource = true;
         }
 
