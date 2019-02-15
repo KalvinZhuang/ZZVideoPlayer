@@ -3,7 +3,7 @@ package org.lynxz.zzplayerlibrary.util;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Created by zxz on 2016/5/3.
